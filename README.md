@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -58,16 +59,87 @@ export default defineConfig([
       // Other configs...
       // Enable lint rules for React
       reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+      # space-theme-portfolio
+
+      A space-themed portfolio built with React, TypeScript and Vite.
+
+      This repository started from the official Vite React + TypeScript template. The README below includes project-specific notes and a short reference to the original template guidance.
+
+      Highlights
+      - React + TypeScript + Vite starter
+      - Space-themed portfolio UI and components
+
+      React compiler
+
+      The React Compiler is not enabled by default because it can affect dev and build performance. To enable it, see: https://react.dev/learn/react-compiler/installation
+
+      # space-theme-portfolio
+
+      A space-themed portfolio built with React, TypeScript and Vite.
+
+      This repository started from the official Vite React + TypeScript template. The README below includes project-specific notes and a short reference to the original template guidance.
+
+      Highlights
+      - React + TypeScript + Vite starter
+      - Space-themed portfolio UI and components
+
+      React compiler
+
+      The React Compiler is not enabled by default because it can affect dev and build performance. To enable it, see: https://react.dev/learn/react-compiler/installation
+
+      ESLint configuration notes
+
+      For production apps we recommend enabling type-aware lint rules. Example (excerpt):
+
+      ```js
+      export default defineConfig([
+        globalIgnores(['dist']),
+        {
+          files: ['**/*.{ts,tsx}'],
+          extends: [
+            // Remove tseslint.configs.recommended and replace with this
+            tseslint.configs.recommendedTypeChecked,
+            // Or use stricter rules
+            tseslint.configs.strictTypeChecked,
+            // Optional stylistic rules
+            tseslint.configs.stylisticTypeChecked,
+          ],
+          languageOptions: {
+            parserOptions: {
+              project: ['./tsconfig.node.json', './tsconfig.app.json'],
+              tsconfigRootDir: import.meta.dirname,
+            },
+          },
+        },
+      ])
+      ```
+
+      You can also add React-specific lint rules with plugins like `eslint-plugin-react-x` and `eslint-plugin-react-dom`.
+
+      Getting started
+
+      1. Install dependencies: `npm install` or `pnpm install`.
+      2. Start dev server: `npm run dev`.
+      3. Build for production: `npm run build`.
+
+      Files of interest
+      - `src/` — app source
+      - `src/components` — UI components (Navbar, ThemeToggle, StarBackground, etc.)
+      - `vite.config.ts`, `tsconfig.json`, `package.json`
+
+      License
+
+      See `package.json` for license information or add one if needed.
+
+      ---
+
+      Original template notes (kept for reference)
+
+      This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+      Currently, two official plugins are available:
+
+      - `@vitejs/plugin-react` uses Babel (or oxc when used in rolldown-vite) for Fast Refresh
+      - `@vitejs/plugin-react-swc` uses SWC for Fast Refresh
+
+      For further development and configuration, consult Vite and React documentation.
