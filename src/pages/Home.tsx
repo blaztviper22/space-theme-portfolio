@@ -1,9 +1,10 @@
+import Navbar from "../components/Navbar"
 import StarBackground from "../components/StarBackground"
 import ThemeToggle from "../components/ThemeToggle"
 
 function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-dvh bg-background text-foreground overflow-x-hidden">
 
         {/* Theme toggle */}
         <ThemeToggle />
@@ -12,7 +13,7 @@ function Home() {
         <StarBackground />
 
         {/* Navbar */}
-
+        <Navbar />
 
         {/* Main Content */}
 
