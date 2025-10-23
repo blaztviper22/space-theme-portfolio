@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { cn } from "../utilities/utils";
 
 
@@ -27,6 +27,7 @@ const Skills = [
     { name: 'NumPy', category: 'Data Science', level: 'Intermediate' },
     { name: 'Matplotlib', category: 'Data Science', level: 'Basic' },
     { name: 'SQL', category: 'Data Science', level: 'Basic' },
+    { name: 'Excel', category: 'Data Science', level: 'Advanced' },
 
     // Embedded Systems
     { name: 'Rust', category: 'Embedded Systems', level: 'Basic' },
@@ -43,10 +44,12 @@ const categories = ['All', 'Frontend', 'Backend', 'Data Science', 'Embedded Syst
 
 function SkillsSection() {
     const [activeCategory, setActiveCategory] = React.useState<string>('All');
-    
-    const filteredSkills = Skills.filter(skill =>
-        activeCategory === 'All' || skill.category === activeCategory
-    );
+
+    const filteredSkills = useMemo(() => {
+            return Skills.filter(skill =>
+            activeCategory === 'All' || skill.category === activeCategory
+        );
+    }, [activeCategory]);
 
   return (
     <section 
