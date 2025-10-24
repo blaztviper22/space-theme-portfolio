@@ -18,7 +18,7 @@ function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delayed-3">
-                I create stellar web experiences with modern technologies.
+                I create stellar web 3 (blockchain) experiences with modern technologies.
                 Specializing in web application development and UI/UX design, I build interfaces
                 that are both beautiful, functional, and innovative.
             </p>

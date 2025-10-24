@@ -38,9 +38,15 @@ const Skills = [
     { name: 'Figma', category: 'Tools', level: 'Basic' },
     { name: 'Postman', category: 'Tools', level: 'Basic' },
     { name: 'VS Code', category: 'Tools', level: 'Advanced' },
+
+    // Blockchain
+    { name: 'Solidity', category: 'Blockchain', level: 'Intermediate' },
+    { name: 'Web3.js', category: 'Blockchain', level: 'Intermediate' },
+    { name: 'Hardhat', category: 'Blockchain', level: 'Basic' },
+    { name: 'Truffle', category: 'Blockchain', level: 'Basic' },
 ];
 
-const categories = ['All', 'Frontend', 'Backend', 'Data Science', 'Embedded Systems', 'Tools'];
+const categories = ['All', 'Frontend', 'Backend', 'Data Science', 'Embedded Systems', 'Tools', 'Blockchain'];
 
 function SkillsSection() {
     const [activeCategory, setActiveCategory] = React.useState<string>('All');

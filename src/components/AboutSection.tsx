@@ -12,13 +12,13 @@ function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Application Developer and Data Analyst
+              Passionate Web3 Application (Blockchain) and Data Analyst
             </h3>
 
             <p className="text-muted-foreground">
-              With 1 year of experience in web application development and data analysis, 
+              With 1 year of experience in blockchain development and data analysis, 
               I specialize in creating dynamic and user-friendly web applications that deliver exceptional user experiences. 
-              My expertise lies in front-end development, UI/UX design, and data visualization, 
+              My expertise lies in blockchain development, UI/UX design, and data visualization, 
               allowing me to build interfaces that are not only visually appealing but also highly functional.
             </p>
 
