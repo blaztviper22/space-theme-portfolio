@@ -5,6 +5,7 @@ import ProjectsSection from "../components/ProjectsSection"
 import SkillsSection from "../components/SkillsSection"
 import StarBackground from "../components/StarBackground"
 import ThemeToggle from "../components/ThemeToggle"
+import ContactSection from "../components/ContactSection"
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
+          <ContactSection />
         </main>
 
         {/* Footer */}
