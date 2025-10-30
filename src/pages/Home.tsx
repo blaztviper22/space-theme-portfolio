@@ -6,6 +6,7 @@ import SkillsSection from "../components/SkillsSection"
 import StarBackground from "../components/StarBackground"
 import ThemeToggle from "../components/ThemeToggle"
 import ContactSection from "../components/ContactSection"
+import Footer from "../components/Footer"
 
 function Home() {
   return (
@@ -30,6 +31,7 @@ function Home() {
         </main>
 
         {/* Footer */}
+        <Footer />
     </div>
   )
 }
