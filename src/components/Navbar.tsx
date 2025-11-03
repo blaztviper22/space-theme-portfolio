@@ -15,7 +15,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.screenY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,6 +24,21 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Prevent body scroll when menu is open 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isMenuOpen]);
+  
 
   return (
     <nav className={cn("fixed w-full z-40 transition-all duration-300", 
@@ -55,14 +70,14 @@ function Navbar() {
         {/* Mobile Nav */}
         <button 
           onClick={() => setIsMenuOpen(prev => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 text-foreground z-50 relative"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         > 
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />} 
         </button>
 
         <div className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center",
+          "fixed inset-0 bg-background/95 backdrop-blur-md flex flex-col items-center justify-center z-40",
           "transition-all duration-300 md:hidden",
           isMenuOpen
             ? "opacity-100 pointer-events-auto" 

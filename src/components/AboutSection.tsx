@@ -18,7 +18,7 @@ function AboutSection() {
             <p className="text-muted-foreground">
               With 1 year of experience in blockchain development and data analysis, 
               I specialize in creating dynamic and user-friendly web applications that deliver exceptional user experiences. 
-              My expertise lies in blockchain development, UI/UX design, and data visualization, 
+              My expertise lies in blockchain development (Web 3 applications), Embeded Systems, and data visualization, 
               allowing me to build interfaces that are not only visually appealing but also highly functional.
             </p>
 
