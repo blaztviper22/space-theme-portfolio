@@ -35,13 +35,13 @@ function ContactSection() {
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
             <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />{" "}
                 </div>
 
-                <div>
-                  <h4> Email</h4>
+                <div className="flex flex-row gap-2">
+                  <h4>Email:</h4>
                   <a 
                     href="mailto:blaztviper22@gmail.com" 
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -51,13 +51,13 @@ function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-center space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />{" "}
                 </div>
 
-                <div>
-                  <h4> Phone</h4>
+                <div className="flex flex-row gap-2">
+                  <h4>Phone:</h4>
                   <a 
                     href="tel:+639308309534" 
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -73,7 +73,9 @@ function ContactSection() {
                 </div>
 
                 <div>
-                  <h4> Location</h4>
+                  <div className="flex flex-start">
+                    <h4>Location:</h4>
+                  </div>
                   <a 
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
@@ -86,19 +88,19 @@ function ContactSection() {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Connect with me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="" target="_blank">
+                <a href="https://www.linkedin.com/in/berthem-benitez-jr-452940294/" target="_blank">
                   <Linkedin />
                 </a>
 
-                <a href="" target="_blank">
+                <a href="https://www.threads.com/@zero10ne" target="_blank">
                   <AtSign />
                 </a>
 
-                <a href="" target="_blank">
+                <a href="https://www.facebook.com/hackeer123asxd" target="_blank">
                   <Facebook />
                 </a>
 
-                <a href="" target="_blank">
+                <a href="https://www.instagram.com/zero10ne/" target="_blank">
                   <Instagram/>
                 </a>
               </div>

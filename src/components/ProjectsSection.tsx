@@ -2,6 +2,8 @@ import { ArrowRight, GitBranch } from "lucide-react";
 import bluffImg from "../assets/bluff.jpg";
 import caosEngineImg from "../assets/caos-engine-app.jpg";
 import taloonImg from "../assets/talon-page.jpg";
+import certificate1 from "../assets/Screenshot 2025-11-03 123112.png";
+import certificate2 from "../assets/Screenshot 2025-11-03 123125.png";
 
 
 const projects = [
@@ -29,6 +31,23 @@ const projects = [
         tags: ["React", "Express.js", "Web3"],
         githubUrl: "https://github.com/HansLove/taloon-back-office-frontend.git",
     },
+    {
+        id: 4, 
+        title: "Data Analytics level 1",
+        description: "Completed 60hrs of Data Analytics level 1 training with basic and advance excel and Power BI",
+        image: certificate1,
+        tags: ["Excel", "Power BI"],
+        githubUrl: "https://drive.google.com/file/d/1L5OjG9Hgg8D7xkh8z8QNdt6QD43pB51o/view?usp=sharing"
+    },
+    {
+        
+        id: 5, 
+        title: "Data Analytics level 2",
+        description: "Completed 60hrs of Data Analytics level 2 training with SQL and VBA Macro",
+        image: certificate2,
+        tags: ["SQL", "VBA Macro"],
+        githubUrl: "https://drive.google.com/file/d/1L5OjG9Hgg8D7xkh8z8QNdt6QD43pB51o/view?usp=sharing"
+    }
 ]
 
 function ProjectsSection() {
@@ -39,7 +58,7 @@ function ProjectsSection() {
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
         {" "}
-        Featured <span className="text-primary"> Projects</span>
+        Featured <span className="text-primary"> Projects and Certifications </span>
       </h2>
 
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -49,10 +68,10 @@ function ProjectsSection() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:mx-40">
-        {projects.map((project, key) => (
+        {projects.map((project) => (
           <div 
             className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-            key={key}>
+            key={project.id}>
             <div className="h-48 overflow-hidden">
               <img
                 src={project.image}
@@ -63,8 +82,8 @@ function ProjectsSection() {
 
             <div className="p-6">
               <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map((tag) => (
-                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground ">
+                {project.tags?.map((tag) => (
+                  <span key={tag} className="px-2 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground ">
                     {tag}
                   </span>
                 ))}
