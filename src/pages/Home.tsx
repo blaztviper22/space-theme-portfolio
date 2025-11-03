@@ -13,7 +13,7 @@ function Home() {
     <div className="min-h-dvh bg-background text-foreground overflow-x-hidden">
 
         {/* Theme toggle */}
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
 
         {/* Background Effect */}
         <StarBackground />
